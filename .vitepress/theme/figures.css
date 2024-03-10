@@ -1,0 +1,31 @@
+/**
+ * Custom styling for figures and their captions.
+ */
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  line-height: 1.4em;
+  font-style: italic;
+  font-size: smaller;
+  text-align: center;
+  padding: 3px 3px 3px 3px;
+}
+
+figure {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+img {
+  padding: 3%;
+}
+
+:root.dark img {
+  /* background-color: var(--vp-c-text-1); */
+  background-color: rgb(255, 255, 255);
+  filter: brightness(0.8) contrast(1.2);
+}

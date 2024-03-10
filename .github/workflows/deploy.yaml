@@ -1,0 +1,40 @@
+name: Deploy VitePress site to server
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with VitePress
+        run: |
+          npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .vitepress/dist
+      - name: Deploy to server over ssh
+        uses: easingthemes/ssh-deploy@v4
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: ".vitepress/dist/"
+          REMOTE_HOST: "www.mat.uniroma2.it"
+          REMOTE_USER: "butterle"
+          TARGET: "~/public_html/DS-intro/"
+          EXCLUDE: ""

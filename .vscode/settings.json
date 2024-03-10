@@ -1,0 +1,18 @@
+{
+  "cSpell.words": [
+    "Aula",
+    "boldsymbol",
+    "Butterley",
+    "infty",
+    "mathbb",
+    "mathbf",
+    "pmatrix",
+    "smallmatrix",
+    "Vergata",
+    "vitepress",
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
+}
