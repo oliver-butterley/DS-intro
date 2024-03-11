@@ -1,15 +1,23 @@
 {
   "cSpell.words": [
+    "Anatole",
     "Aula",
     "boldsymbol",
+    "Brin",
     "Butterley",
+    "Devaney",
+    "Hasselblatt",
     "infty",
+    "Katok",
+    "Liverani",
+    "Luzzatto",
+    "magistrale",
     "mathbb",
     "mathbf",
     "pmatrix",
     "smallmatrix",
     "Vergata",
-    "vitepress",
+    "vitepress"
   ],
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

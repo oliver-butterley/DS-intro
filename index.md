@@ -12,13 +12,14 @@ These key examples include,
 
 Motivated by the examples, we introduce the phenomena and main concepts which one is interested in studying.
 In the subsequent parts of the course, we further refine and develop these concepts. 
-We mostly focus on the following topics:
+These topics include the following:
 
 - topological dynamics;
 - symbolic dynamics;
-- ergodic theory.
+- ergodic theory;
+- showing ergodicity for hyperbolic systems.
 
-In each topic we will work with some of the most significant results and always aim to get an accurate flavour of the field.
+The field of dynamical systems is vast and so we can't be comprehensive in every topic, instead we will work with some of the most significant results and always aim to get an accurate flavour relevant dynamical results and dynamical style arguments.
 
 These pages contain the lecture notes and practical details related to the course.
 
