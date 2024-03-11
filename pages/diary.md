@@ -14,7 +14,7 @@ const weeks = data.diary.map( (el) => el.week ).filter((value, index, array) => 
 
 <ul>
   <li  v-for="diaryItem in data.diary.filter((el) => el.week == week )">
-    {{ diaryItem.date }}, {{ diaryItem.time }}: {{ diaryItem.topic }}
+    {{ diaryItem.date }}, {{ diaryItem.time }} ({{ diaryItem.location }}): {{ diaryItem.topic }}
   </li>
 </ul>
 
