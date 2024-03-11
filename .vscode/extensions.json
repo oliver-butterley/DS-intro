@@ -4,7 +4,6 @@
     "esbenp.prettier-vscode",
     "mhutchie.git-graph",
     "vue.vscode-typescript-vue-plugin",
-    "vue.volar",
     "janisdd.vscode-edit-csv"
   ]
 }
