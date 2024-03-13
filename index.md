@@ -1,7 +1,7 @@
-# Introduction to dynamical systems 
+# Introduction to dynamical systems
 
 This course is an introduction to subject of dynamical systems from a mathematical point of view.
-In the first part of the course we will consider various diverse and representative examples. 
+In the first part of the course we will consider various diverse and representative examples.
 These key examples include,
 
 - circle rotations;
@@ -11,7 +11,7 @@ These key examples include,
 - the Gauss map.
 
 Motivated by the examples, we introduce the phenomena and main concepts which one is interested in studying.
-In the subsequent parts of the course, we further refine and develop these concepts. 
+In the subsequent parts of the course, we further refine and develop these concepts.
 These topics include the following:
 
 - topological dynamics;
@@ -42,7 +42,8 @@ See also the [lesson diary](/pages/diary).
 - _A First Course in Dynamics: with a Panorama of Recent Developments_ by Boris Hasselblatt, Anatole Katok
 - _An Introduction To Chaotic Dynamical Systems_ by Robert L. Devaney
 - [Lecture notes](https://www.mat.uniroma2.it/~liverani/SysDyn21/book.pdf) by Carlangelo Liverani
-- [Lecture notes](https://www.dropbox.com/s/5zm9v4epxwvfco5/DynSysLectureNotes%20SISSA%202021.pdf?dl=0) by Stefano Luzzatto 
+- [Lecture notes](https://www.dropbox.com/s/5zm9v4epxwvfco5/DynSysLectureNotes%20SISSA%202021.pdf?dl=0) by Stefano Luzzatto
+- ICTP [summer school](https://people.maths.bris.ac.uk/~ip13935/dyn/ICTP.html)
 
 ## General advice
 
@@ -51,4 +52,3 @@ See also the [lesson diary](/pages/diary).
 - Question always, be sceptical of all statements presented to you. Don’t accept them until you are sure they are believable.
 - Observe, question how everything fits together, notice all the details.
 - Part of the process of mathematical reasoning is creative - to be creative we must drop our inhibitions and be ready to be wrong, repeatedly.
-                                              
