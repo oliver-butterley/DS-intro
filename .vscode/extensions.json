@@ -1,9 +1,3 @@
 {
-  "recommendations": [
-    "mechatroner.rainbow-csv",
-    "esbenp.prettier-vscode",
-    "mhutchie.git-graph",
-    "vue.vscode-typescript-vue-plugin",
-    "janisdd.vscode-edit-csv"
-  ]
+  "recommendations": ["esbenp.prettier-vscode"]
 }
