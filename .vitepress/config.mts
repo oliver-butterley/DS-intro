@@ -44,7 +44,8 @@ const containerSetup = function (
 export default defineConfig({
   lang: "en-GB",
   title: "Dynamical Systems",
-  description: "Course material for Introduction to Dynamical Systems, University of Rome Tor Vergata 2023/24",
+  description:
+    "Course material for Introduction to Dynamical Systems, University of Rome Tor Vergata 2023/24",
   base: "/butterley/DS-intro/",
 
   head: [
@@ -60,6 +61,7 @@ export default defineConfig({
       md.use(mdImplicitFigures, figuresSetup)
         .use(mdSuperscript)
         .use(mdContainer, ...containerSetup(md, "theorem", "Theorem", "tip"))
+        .use(mdContainer, ...containerSetup(md, "exercise", "Exercise", "info"))
         .use(
           mdContainer,
           ...containerSetup(md, "definition", "Definition", "tip")
