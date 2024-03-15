@@ -122,6 +122,7 @@ The absolute value of $p$ is the **winding number**, the number of times an orbi
 :::
 
 In the present setting of circle rotations the behaviour of the system depends heavily on whether $\alpha$ is irrational or not.
+As we have seen, if $\alpha = p/q$ then $R_\alpha^n = \mathrm{id}$ and so every orbit is periodic.
 
 ::: exercise
 Let $R_\alpha : S^1 \to S^1$ and suppose that $\alpha$ is irrational.
@@ -158,6 +159,10 @@ and this can be rephrased in terms of the circle rotation $R_\alpha$ where $\alp
 
 :::
 
+A general question for these systems and for others is when a system can be decomposed or when the system is not decomposable in some sense.
+In this direction we here introduce the concept of **minimal**.
+Later, with a similar point of view of studying the decomposability of systems, we introduce the concept of **ergodicity**.
+
 As we progress and study more systems it will be important to have a notion of when a system is really the same as another and when not.
 For this we introduce the notion of conjugacy.
 
@@ -179,13 +184,34 @@ Show that the circle rotations $R_\alpha$ and $R_\beta$ are conjugate by a homeo
 ## Expanding circle endomorphisms
 
 ::: definition expanding circle endomorphism
-...
+For any $m \in \mathbb{Z}$ we define the **circle endomorphism**
+
+$$
+E_m : S^1 \to S^1, \quad z \mapsto z^m.
+$$
+
 :::
 
-## Interval maps
+When $|m| > 1$ these transformations are expanding in the sense that the distance between nearby points is expanded by a factor of $m$.
+
+Let $\mathrm{Leb}$ denote Lebesgue measure.
 
 ::: exercise
+Prove that $\mathrm{Leb}(E_m^{-1}[a,b]) = \mathrm{Leb}([a,b])$ for any interval $[a,b]$.
+Does this imply that Lebesgue measure is invariant?
+:::
 
+::: exercise
+Show that the set of points with dense orbits is uncountable.
+:::
+
+::: exercise
+Show that the set of points with dense orbits under $E_m$ has full Lebesgue measure.
+:::
+
+## Expanding interval maps
+
+::: exercise
 Let $I = [0,1]$ and let $T : X \to X$ be differentiable and invertible.
 Prove that,
 
