@@ -275,13 +275,13 @@ We call this the one-sided shift since we could also consider the case of $\{0,\
 Let
 
 $$
-\varphi_m : \Sigma_m \to [0,1]; \quad (x_k)_{k\in\mathbb{N}} \mapsto \sum_{k\in \mathbb{N}} x_k m^{-(k + 1)}
+\phi_m : \Sigma_m \to [0,1]; \quad (x_k)_{k\in\mathbb{N}} \mapsto \sum_{k\in \mathbb{N}} x_k m^{-(k + 1)}
 $$
 
 :::
 
 ::: exercise
-Prove that $\varphi_m$ is surjective, that it is one-to-one except for a countable set of sequences and that it is a semiconjugacy.
+Prove that $\phi_m$ is surjective, that it is one-to-one except for a countable set of sequences and that it is a semiconjugacy.
 :::
 
 We can take advantage of the symbolic dynamics in order to prove properties of expanding circle endomorphisms.
@@ -294,11 +294,11 @@ Show that the periodic points of $E_m$ are dense.
 ::: details Sketch of proof
 Let $\epsilon > 0$, $x\in S^1$. We will find a periodic point $y \in S^1$ which is $\epsilon$-close to $x$.
 
-- Let $a = (a_0,a_1,\ldots) \in \Sigma_m$ such that $\varphi_m a = x$;
+- Let $a = (a_0,a_1,\ldots) \in \Sigma_m$ such that $\phi_m a = x$;
 - Choose $n\in\mathbb{N}$ such that $m^{-n} < \epsilon$;
 - Let $b \in \Sigma_m$ be defined by taking the first $n$ symbols of $a$ and then repeating them;
-- Observe that $\varphi_m b$ is a periodic point;
-- Calculate that $y = \varphi_m b$ is $\epsilon$-close to $x$ because the first $n$ symbols in the sequence agree.
+- Observe that $\phi_m b$ is a periodic point;
+- Calculate that $y = \phi_m b$ is $\epsilon$-close to $x$ because the first $n$ symbols in the sequence agree.
 
 :::
 
@@ -311,6 +311,51 @@ Show that the set of points with dense orbits under $E_m$ has full Lebesgue meas
 :::
 
 ## The Gauss transformation
+
+For any $x\in\mathbb{R}$ let $\lfloor x \rfloor$ denote the greatest integer less than or equal to $x$.
+
+::: definition Gauss transformation
+Let
+
+$$
+\varphi : [0,1] \to [0,1];
+\quad x \mapsto
+\begin{cases}
+1/x - \lfloor 1/x \rfloor & \text{if} \quad x \neq 0 \\
+0   & \text{if} \quad x = 0.
+\end{cases}
+$$
+
+:::
+
+::: exercise
+Draw a graph of the Gauss transformation.
+Where is it discontinuous?
+:::
+
+The Gauss transformation is connected to continued fractions.
+With this idea is it possible to conjugate the Gauss transformation to a shift map.
+
+::: exercise
+What are the fixed points of the Gauss transformation?
+:::
+
+::: exercise
+Show that $x \in [0,1]$ is rational if and only if $\varphi^m x = 0$ for some $n\in \mathbb{N}$.
+:::
+
+The Gauss measure is one with with density $1/(1+x)$.
+The measure of an interval $[a,b]$ is
+
+$$
+\mu([a,b]) = \frac{1}{\log 2} \int_a^b \frac{1}{1+x} \ dx = \frac{1}{\log 2} \frac{1 + b}{1 + a}.
+$$
+
+This measure is $\varphi$-invariant in the sense that $\mu(\varphi^{-1} A) = \mu(A)$ for any measurable set $A$.
+
+::: exercise
+Show the invariance of the Gauss measure.
+:::
 
 ## Hyperbolic toral automorphisms
 
