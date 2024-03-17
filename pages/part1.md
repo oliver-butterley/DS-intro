@@ -98,11 +98,6 @@ Let $T : M \times X \to X$ be a dynamical system, $x \in X$.
 If $T(0,x) = x$ we say that $x$ is a **fixed point**.
 :::
 
-::: definition eventually periodic
-Let $T : M \times X \to X$ be a dynamical system, $x \in X$, $t\in M$.
-If $T(t,x)$ is periodic then we say that $x$ is **eventually periodic**.
-:::
-
 ::: definition minimal period
 Let $T : M \times X \to X$ be a dynamical system, $x \in X$ and $M \in \{\mathbb{N}, \mathbb{Z}, \mathbb{R}_{\geq 0}, \mathbb{R}\}$.
 Suppose further that $x \in X$ is a periodic point but not a fixed point.
@@ -163,6 +158,25 @@ A general question for these systems and for others is when a system can be deco
 In this direction we here introduce the concept of **minimal**.
 Later, with a similar point of view of studying the decomposability of systems, we introduce the concept of **ergodicity**.
 
+::: definition invariant
+Let $T : M \times X \to X$ be a dynamical system.
+A set $Y \subseteq X$ is said to be $T-$**invariant** if $T(t,y) \in Y$ for all $t\in M$, $y\in Y$.
+:::
+
+::: definition minimal set
+Let $T : M \times X \to X$ be a dynamical system.
+A set $Y \subseteq X$ is said to be a **minimal set** if it is non-empty, closed and invariant and no proper subset satisfies these three properties.
+:::
+
+::: definition minimal
+Let $T : M \times X \to X$ be a dynamical system.
+We say that $T$ is **minimal** if $X$ is a minimal set.
+:::
+
+::: exercise
+Show that circle rotations are minimal.
+:::
+
 As we progress and study more systems it will be important to have a notion of when a system is really the same as another and when not.
 For this we introduce the notion of conjugacy.
 
@@ -184,7 +198,7 @@ Show that the circle rotations $R_\alpha$ and $R_\beta$ are conjugate by a homeo
 ## Expanding circle endomorphisms
 
 ::: definition expanding circle endomorphism
-For any $m \in \mathbb{Z}$ we define the **circle endomorphism**
+For any $m \in \mathbb{N}$, $2 \leq m$ we define the **circle endomorphism**
 
 $$
 E_m : S^1 \to S^1, \quad z \mapsto z^m.
@@ -192,27 +206,40 @@ $$
 
 :::
 
-When $|m| > 1$ these transformations are expanding in the sense that the distance between nearby points is expanded by a factor of $m$.
+It is often convenient to view these transformations as $e^{2\pi i x} \mapsto e^{2\pi i m x}$ and so we can instead consider $x \mapsto m x \mod 1$ acting on the unit interval with end points identified.
+
+Since $|m| > 1$ these transformations are expanding in the sense that the distance between nearby points is expanded by a factor of $m$.
+To be precise, if $d(x,y) \leq \frac{1}{2m}$ then $d(E_m x, E_m y) = m d(x, y)$.
+On the other hand, there exist pairs of points which are rather far one from the other yet the images of these points like close to each other.
+
+::: definition eventually periodic
+Let $T : M \times X \to X$ be a dynamical system, $x \in X$, $t\in M$.
+If $T(t,x)$ is periodic then we say that $x$ is **eventually periodic**.
+:::
+
+In a system which is not invertible it is possible for a point to be eventually periodic without being periodic.
+For example, consider $E_2$ and the point $x = 1/6$ which has the orbit $\mathcal{O}(x) = \{1/6, 1/3, 2/3, 1/3, 2/3,\ldots\}$, i.e., this point is not periodic but it's image is periodic of period $2$.
 
 Let $\mathrm{Leb}$ denote Lebesgue measure.
 
 ::: exercise
 Prove that $\mathrm{Leb}(E_m^{-1}[a,b]) = \mathrm{Leb}([a,b])$ for any interval $[a,b]$.
-Does this imply that Lebesgue measure is invariant?
+Why does this imply that Lebesgue measure is invariant?
 :::
 
 ::: exercise
-Show that the set of points with dense orbits is uncountable.
+How many fixed points does $E_m$ have?
 :::
 
-::: exercise
-Show that the set of points with dense orbits under $E_m$ has full Lebesgue measure.
-:::
+Are there periodic points? Are there many periodic points? Are there dense orbits? Are there many dense orbits?
+In order to investigate these questions it will be convenient to introduce **symbolic dynamics** and understand a conjugacy with expanding endomorphisms and so we postpone the questions to later.
 
-## Expanding interval maps
+## Affine expanding interval maps
+
+Another class of system we can consider are the transformations $T : [0,1] \to [0,1]$ which are piecewise affine and with derivative strictly greater than $1$.
 
 ::: exercise
-Let $I = [0,1]$ and let $T : X \to X$ be differentiable and invertible.
+Let $T : [0,1] \to [0,1]$ be differentiable and invertible.
 Prove that,
 
 - If $T'$ is positive then $T$ has only fixed points and no periodic points;
@@ -220,7 +247,68 @@ Prove that,
 
 :::
 
-## Shift maps
+::: definition expanding but not really
+Let $T : [0,1] \to [0,1]$ be defined as the transformation such that, for each $n \in \mathbb{N}$, $T$ is affine with derivative equal to $2$ on $[2^{-(n + 1)},2^{-n})$ and $T(2^{-(n + 1)}) = 0$.
+:::
+
+This system has the interesting property that all orbits converge to $0$ whilst the derivative is equal to $2$ everywhere.
+
+## Symbolic dynamics and shift maps
+
+Here we introduce another class of dynamical systems which we refer to as symbolic dynamics.
+
+::: definition one-sided shift
+Let $m \in \mathbb{N}$, $2 \leq m$ and define $\Sigma_m = \{0,\ldots,m-1\}^{\mathbb{N}}$.
+Let
+
+$$
+\sigma : \Sigma_m \to \Sigma_m; \quad (x_0, x_1, x_2,\ldots) \mapsto (x_1, x_2,\ldots).
+$$
+
+:::
+
+We refer to $\Sigma_m$ as the set of sequences and to $\sigma$ as the shift map.
+Observe that $\sigma$ in not invertible.
+We call this the one-sided shift since we could also consider the case of $\{0,\ldots,m-1\}^{\mathbb{Z}}$ and then the shift is invertible.
+
+::: definition conjugacy of shift map and expanding circle endomorphism
+Let
+
+$$
+\varphi_m : \Sigma_m \to [0,1]; \quad (x_k)_{k\in\mathbb{N}} \mapsto \sum_{k\in \mathbb{N}} x_k m^{-(k + 1)}
+$$
+
+:::
+
+::: exercise
+Prove that $\varphi_m$ is surjective, that it is one-to-one except for a countable set of sequences and that it is a semiconjugacy.
+:::
+
+We can take advantage of the symbolic dynamics in order to prove properties of expanding circle endomorphisms.
+Possibly many of these properties could be proved in other ways but the aim here is to develop a dynamical style proof which is therefore applicable to more systems, particular those which are less regular.
+
+::: exercise
+Show that the periodic points of $E_m$ are dense.
+:::
+
+::: details Sketch of proof
+Let $\epsilon > 0$, $x\in S^1$. We will find a periodic point $y \in S^1$ which is $\epsilon$-close to $x$.
+
+- Let $a = (a_0,a_1,\ldots) \in \Sigma_m$ such that $\varphi_m a = x$;
+- Choose $n\in\mathbb{N}$ such that $m^{-n} < \epsilon$;
+- Let $b \in \Sigma_m$ be defined by taking the first $n$ symbols of $a$ and then repeating them;
+- Observe that $\varphi_m b$ is a periodic point;
+- Calculate that $y = \varphi_m b$ is $\epsilon$-close to $x$ because the first $n$ symbols in the sequence agree.
+
+:::
+
+::: exercise
+Show that the set of points of $E_m$ with dense orbits is uncountable.
+:::
+
+::: exercise
+Show that the set of points with dense orbits under $E_m$ has full Lebesgue measure.
+:::
 
 ## The Gauss transformation
 
