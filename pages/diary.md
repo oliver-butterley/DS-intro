@@ -7,6 +7,14 @@ const weeks = data.diary.map( (el) => el.week ).filter((value, index, array) => 
 
 # Lecture diary
 
+## Schedule
+
+- Monday 11:00 - 13:00
+- Wednesday 14:00 - 16:00
+- Friday 11:00 - 13:00
+
+## Lesson topics
+
 <div v-if="data.diary">
 <div v-for="week in weeks">
 
