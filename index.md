@@ -29,12 +29,7 @@ These pages contain the lecture notes and practical details related to the cours
 - 8 CFU, 64 lecture hours
 - Part of the [laurea magistrale](https://www.mat.uniroma2.it/didattica/magistrale.php) in mathematics at the University of Rome Tor Vergata.
 - Instructor: [Oliver Butterley](https://www.mat.uniroma2.it/butterley/)
-
-## Schedule
-
-Tentative schedule: 14-16 Monday, 14-16 Wednesday. (After the first week we will fix the schedule based on the availability of all the participants.)
-
-See also the [lesson diary](/pages/diary).
+- Schedule: see full [schedule details](/pages/diary).
 
 ## Further reading
 
