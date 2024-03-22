@@ -95,7 +95,7 @@ We refer to the orbit of a periodic point as a **periodic orbit**.
 
 ::: definition fixed point
 Let $T : M \times X \to X$ be a dynamical system, $x \in X$.
-If $T(0,x) = x$ we say that $x$ is a **fixed point**.
+If, for all $t\in M$, $T(t,x) = x$ we say that $x$ is a **fixed point**.
 :::
 
 ::: definition minimal period
