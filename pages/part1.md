@@ -5,11 +5,10 @@ Likely full of errors and omissions.
 Everyone is welcome to contribute corrections and improvements.
 :::
 
-This part of the course follows closely _Introduction to Dynamical Systems_ by Michael Brin, Garrett Stuck.[^1]
+In this part of the course we consider some of the classic dynamical systems and explore a few of the main notions of dynamics.
+Further details can be found in many standard reference texts.[^1]
 
-[^1]:
-    _Introduction to Dynamical Systems_ by Michael Brin, Garrett Stuck.
-    Sections 1.1, 1.2, 1.3, 1.4, 1.6, 1.7.
+[^1]: Further details related to these topics can be found in many reference texts, for instance _Introduction to Dynamical Systems_ by Michael Brin, Garrett Stuck, sections 1.1, 1.2, 1.3, 1.4, 1.6, 1.7.
 
 It is convenient to start with a rather general definition of our object of study.
 
@@ -191,7 +190,7 @@ We say that $T$ is **minimal** if $X$ is a minimal set.
 :::
 
 ::: exercise
-Show that circle rotations are minimal.
+Show that irrational circle rotations are minimal.
 :::
 
 As we progress and study more systems it will be important to have a notion of when a system is really the same as another and when not.
@@ -223,11 +222,15 @@ $$
 
 :::
 
-It is often convenient to view these transformations as $e^{2\pi i x} \mapsto e^{2\pi i m x}$ and so we can instead consider $x \mapsto m x \mod 1$ acting on the unit interval with end points identified.
+It is often convenient to view these transformations as $e^{2\pi i (x)} \mapsto e^{2\pi i (m x)}$ and so we can instead consider $x \mapsto m x \mod 1$ acting on the unit interval with end points identified.
 
 Since $|m| > 1$ these transformations are expanding in the sense that the distance between nearby points is expanded by a factor of $m$.
 To be precise, if $d(x,y) \leq \frac{1}{2m}$ then $d(E_m x, E_m y) = m d(x, y)$.
 On the other hand, there exist pairs of points which are rather far one from the other yet the images of these points like close to each other.
+
+::: exercise
+Draw the graph of the transformation $[0,1) \to [0,1)$; $x \mapsto 2 x \mod 1$ and mark of this: (1) a pair of points which are separated; (2) a pair of points which are far from each other but which map close to each other; (3) a periodic point; (4) a fixed point.
+:::
 
 ::: definition eventually periodic
 Let $T : M \times X \to X$ be a dynamical system, $x \in X$, $t\in M$.
@@ -237,11 +240,28 @@ If $T(t,x)$ is periodic then we say that $x$ is **eventually periodic**.
 In a system which is not invertible it is possible for a point to be eventually periodic without being periodic.
 For example, consider $E_2$ and the point $x = 1/6$ which has the orbit $\mathcal{O}(x) = \{1/6, 1/3, 2/3, 1/3, 2/3,\ldots\}$, i.e., this point is not periodic but it's image is periodic of period $2$.
 
+::: definition invariant measure
+We say that a measure $\mu$ is invariant under the dynamics $T : X \to X$ if, for every measurable set $A \subseteq X$, $\mu(T^{-1} A) = \mu(A)$.
+:::
+
+Equivalently, according to the [Riesz–Markov–Kakutani](https://en.wikipedia.org/wiki/Riesz%E2%80%93Markov%E2%80%93Kakutani_representation_theorem) representation theorem, a measure $\mu$ is invariant if for all compactly supported continuous $\varphi : X \to \mathbb{C}$, $\mu(\varphi \circ T) = \mu(\varphi)$.
+
 Let $\mathrm{Leb}$ denote Lebesgue measure.
 
 ::: exercise
 Prove that $\mathrm{Leb}(E_m^{-1}[a,b]) = \mathrm{Leb}([a,b])$ for any interval $[a,b]$.
-Why does this imply that Lebesgue measure is invariant?
+This suffices to imply that Lebesgue measure is invariant for any Borel subset.
+:::
+
+Let $\delta_x$ denote the $\delta$-measure at point $x$ in the sense that, if $A$ is some set,
+
+$$
+\delta_x(A) = \begin{cases} 1 & \text{if $x \in A$}\\ 0 & \text{if $x \notin A$} \end{cases}
+$$
+
+::: exercise
+Suppose that $x$ is a periodic point of period $n$.
+Show that the probability measure defined as $\frac{1}{n} \sum_{k=0}^{n-1} \delta_{E_m^n x}$ is invariant.
 :::
 
 ::: exercise
@@ -250,6 +270,11 @@ How many fixed points does $E_m$ have?
 
 Are there periodic points? Are there many periodic points? Are there dense orbits? Are there many dense orbits?
 In order to investigate these questions it will be convenient to introduce **symbolic dynamics** and understand a conjugacy with expanding endomorphisms and so we postpone the questions to later.
+
+::: exercise
+Suppose that $x$ is a periodic point of period $n$.
+Show that the probability measure defined as $\frac{1}{n} \sum_{k=0}^{n-1} \delta_{E_m^n x}$ is ergodic.
+:::
 
 ## Affine expanding interval maps
 
@@ -325,6 +350,37 @@ Show that the set of points of $E_m$ with dense orbits is uncountable.
 
 ::: exercise
 Show that the set of points with dense orbits under $E_m$ has full Lebesgue measure.
+:::
+
+## Lebesgue measure is an ergodic measure for expanding circle endomorphisms
+
+Up until this point we have considered the topological dynamics, the action of the dynamics on points, the behaviour of individual orbits, we looked at period orbits, dense orbits, etc.
+We have already seen that in many situations the picture of orbits is incredibly complex.
+With ergodic theory we study the behaviour of the system on a set of full measure.
+Ergodic theory is the study of statistical properties of dynamical systems relative to a measure on the underlying space.
+
+In a later part of the course we will return to ergodic theory in detail, for the moment we consider a few of the aspect related to the systems we introduced.
+
+In the following, recall the expanding circle endomorphism $E_m : [0,1) \to [0,1)$.
+
+::: definition ergodic
+Suppose that $(X, \mathcal{F})$ is a measurable space and $\mu$ is an invariant probability measure for $T : X \to X$.
+We say that $\mu$ is an ergodic measure for $T$ if, for any $A \in \mathcal{B}$ such that $T^{-1} A = A$, $\mu(A) \in \{0,1\}$.
+:::
+
+::: exercise
+Suppose that $x$ is a periodic point of period $n$.
+Show that the probability measure defined as $\frac{1}{n} \sum_{k=0}^{n-1} \delta_{E_m^n x}$ is ergodic.
+:::
+
+::: theorem
+Lebesgue measure is an ergodic measure for the expanding circle endomorphism $E_m$.
+:::
+
+::: info Proof
+
+Coming soon...
+
 :::
 
 ## The Gauss transformation
