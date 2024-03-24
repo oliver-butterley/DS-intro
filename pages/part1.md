@@ -1,7 +1,15 @@
 # Examples and basic concepts
 
-> [!WARNING]
-> Draft version, likely full of errors and omissions.
+::: warning Draft version
+Likely full of errors and omissions.
+Everyone is welcome to contribute corrections and improvements.
+:::
+
+This part of the course follows closely _Introduction to Dynamical Systems_ by Michael Brin, Garrett Stuck.[^1]
+
+[^1]:
+    _Introduction to Dynamical Systems_ by Michael Brin, Garrett Stuck.
+    Sections 1.1, 1.2, 1.3, 1.4, 1.6, 1.7.
 
 It is convenient to start with a rather general definition of our object of study.
 
@@ -14,12 +22,14 @@ We say that $T : M \times X \to X$ is a **dynamical system** if
 
 :::
 
-We will often refer to $X$ as the **state space** and, in practice, the set will have substantially more
+We will often refer to $X$ as the **state space** or **phase space** and, in practice, the set will have substantially more structure than we write at this stage.
+Typically it will be some manifold or subset of such.
 
 We will consider the cases where $M \in \{\mathbb{N}, \mathbb{Z}, \mathbb{R}_{\geq 0}, \mathbb{R}\}$ and we talk about this as the **time** in the system.
 (Here and subsequently we use the convention that $\mathbb{N} = \{0,1,2,\ldots\}$ and ignore debates about what is "natural".)
 The first two options correspond to **discrete time** systems and the last two options corresponds to **continuous time** systems.
 The second and forth options correspond to invertible systems.
+
 At the moment we will focus on discrete time systems but, when applicable, our definitions and theorems will be as general as possible.
 As such we are working with a transformation $T : X \to X$ for some non-empty set $X$ and we consider the iterates.
 So, in order to fit with the above abstract framework, we are considering the transformation,
@@ -127,8 +137,12 @@ Show that for every point $x\in S^1$ the forward orbit $\mathcal{O}(x)$ is dense
 ::: details Sketch of proof
 
 1. Each orbit consist of infinitely many distinct points: this can be argued by contradiction.
-2. For $\epsilon > 0$ choose $N \in \mathbb{N}$ such that $1/N < \epsilon$. Consider the points $\{R_\alpha^n : 0 \leq n \leq N\}$ and observe that there must be two distinct points of this set which are closer than a distance of $\epsilon$. These two points are $e^{2\pi i m}$, $e^{2\pi i m'}$ for some integers $m < m'$.
-3. Consider $R_\alpha^{m'-m}$. This is a rotation of a positive angle less than $\epsilon$ and so the orbit of this set is at least $\epsilon$-close to any point in the circle.
+2. For $\epsilon > 0$ choose $N \in \mathbb{N}$ such that $1/N < \epsilon$.
+   Consider the points $\{R_\alpha^n : 0 \leq n \leq N\}$.
+   According to the [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) there must be two distinct points of this set which are closer than a distance of $\epsilon$.
+   These two points are $e^{2\pi i m}$, $e^{2\pi i m'}$ for some integers $m < m'$.
+3. Consider $R_\alpha^{m'-m}$.
+   This is a rotation of a positive angle less than $\epsilon$ and so the orbit of this set is at least $\epsilon$-close to any point in the circle.
 
 :::
 
@@ -162,6 +176,9 @@ Later, with a similar point of view of studying the decomposability of systems, 
 Let $T : M \times X \to X$ be a dynamical system.
 A set $Y \subseteq X$ is said to be $T-$**invariant** if $T(t,y) \in Y$ for all $t\in M$, $y\in Y$.
 :::
+
+In practice, in the discrete time case of $M = \mathbb{N}$ and $T : X \to X$, this is equivalent to $T Y \subseteq Y$.
+Note that later, particularly when defining ergodicity, we will consider sets which satisfy $T^{-1} Y = Y$, a related but different notion.
 
 ::: definition minimal set
 Let $T : M \times X \to X$ be a dynamical system.

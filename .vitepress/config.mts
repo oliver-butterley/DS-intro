@@ -3,6 +3,7 @@ import mdImplicitFigures from "markdown-it-implicit-figures";
 import mdSuperscript from "markdown-it-sup";
 import MarkdownIt from "markdown-it";
 import mdContainer from "markdown-it-container";
+import mdFootnote from "markdown-it-footnote";
 
 const courseParts = [
   "Examples and concepts",
@@ -65,7 +66,8 @@ export default defineConfig({
         .use(
           mdContainer,
           ...containerSetup(md, "definition", "Definition", "tip")
-        );
+        )
+        .use(mdFootnote);
     },
   },
 
