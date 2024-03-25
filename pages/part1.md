@@ -170,6 +170,7 @@ and this can be rephrased in terms of the circle rotation $R_\alpha$ where $\alp
 A general question for these systems and for others is when a system can be decomposed or when the system is not decomposable in some sense.
 In this direction we here introduce the concept of **minimal**.
 Later, with a similar point of view of studying the decomposability of systems, we introduce the concept of **ergodicity**.
+Minimal systems are a generalization of periodic orbits, and they are the analogue in topological dynamics of ergodic measures.
 
 ::: definition invariant
 Let $T : M \times X \to X$ be a dynamical system.
@@ -352,6 +353,10 @@ Show that the set of points of $E_m$ with dense orbits is uncountable.
 Show that the set of points with dense orbits under $E_m$ has full Lebesgue measure.
 :::
 
+### Dynamical partitions for expanding circle endomorphisms
+
+...
+
 ## Lebesgue measure is an ergodic measure for expanding circle endomorphisms
 
 Up until this point we have considered the topological dynamics, the action of the dynamics on points, the behaviour of individual orbits, we looked at period orbits, dense orbits, etc.
@@ -379,7 +384,27 @@ Lebesgue measure is an ergodic measure for the expanding circle endomorphism $E_
 
 ::: info Proof
 
-Coming soon...
+For brevity we use the notation $|A|$ to denote the Lebesgue measure of a set $A$.
+
+1. Let $A \subseteq [0,1)$ satisfy $E_m^{-1}A = A$, $|A| > 0$. It suffices to prove that $|A| = 1$.
+2. According to [Lebesgue's density theorem](https://en.wikipedia.org/wiki/Lebesgue's_density_theorem), since $|A| > 0$, for any $\epsilon > 0$ there exists a ball $B$ such that $|B \cap A| > 1 - \epsilon$.
+3. There exists $n$ large such that the elements of $\mathcal{P}$ are small and so there exists $\omega \in \mathcal{P}$ such that $\omega \subseteq B$.
+4. Consequently $|\omega \cap A^c| \leq \epsilon |\omega|$.
+5. We take advantage of the fact that $E_m : \omega \to [0,1)$ is an affine bijection and so
+
+   $$
+    \frac{|E_m^n(\omega \cap A^c)|}{|E_m^n \omega|} = \frac{|\omega \cap A^c|}{|\omega|} \leq \epsilon.
+   $$
+
+6. We assumed that $E_m^{-1}A = A$ and so $E_m^{-1}A^c = A^c$ and so $E_m^{-n}A^c = A^c$.
+   Consequently $E_m^n(\omega \cap A^c) = E_m^n(\omega \cap E_m^{-n}A^c) = [0,1) \cap A^c = A^c$.
+7. This means that
+
+   $$
+    \frac{|A^c|}{|[0,1)|} = \frac{|E_m^n(\omega \cap A^c)|}{|E_m^n \omega|} \leq \epsilon.
+   $$
+
+   Since $\epsilon > 0$ was arbitrary, we have proven that $|A^c| = 0$ and so $|A| = 1$.
 
 :::
 
