@@ -1,33 +1,39 @@
-date,time,topic,location,week,notes
-13/03/2024,14:00-16:00,Welcome to course; Circle rotations and first notions.,1200,1,
-15/03/2024,14:00-16:00,"Expanding circle maps, symbolic dynamics and further notions.",1200,1,
-19/03/2024,16:00-18:00,"Periodic orbits and dense orbits for expanding maps, etc.",1200,2,
-20/03/2024,16:00-18:00,"More on expanding maps, proof that Lebesgue is ergodic for affine expanding interval maps.",1200,2,
-22/03/2024,11:00-13:00,cancelled (Oliver failed to use his calendar),1200,2,
-25/03/2024,11:00-13:00,Hyperbolic toral automorphisms.,1200,3,
-27/03/2024,14:00-16:00,"Fixed points, invariant manifolds, etc for hyperbolic toral automorphisms.",1200,3,
-29/03/2024,11:00-13:00,cancelled (Easter),1200,3,
-01/04/2024,11:00-13:00,cancelled (Easter),1200,4,
-03/04/2024,14:00-16:00,"Subshifts of finite type, topology of the space of sequences.",1200,4,
-05/04/2024,11:00-13:00,Markov partition and symbolic coding for a hyperbolic toral automorphism.,1200,4,
-08/04/2024,11:00-13:00,cancelled (Oliver not available),1200,5,Oliver failed to schedule properly
-10/04/2024,14:00-16:00,cancelled (Oliver not available),1200,5,Oliver ill still
-12/04/2024,11:00-13:00,cancelled (Oliver not available),1200,5,
-15/04/2024,11:00-13:00,cancelled (Oliver not available),1200,6,
-17/04/2024,14:00-16:00,cancelled (Oliver not available),1200,6,Oliver travelling
-19/04/2024,11:00-13:00,cancelled (Oliver not available),1200,6,Oliver travelling
-22/04/2024,11:00-13:00,"Measure theory recap, examples, invariant measures, Poincaré recurrence.",1200,7,
-24/04/2024,14:00-16:00,"More on ergodic theory, mixing, weak-mixing.",1200,7,
-26/04/2024,11:00-13:00,cancelled (26 aprile 2024 le lezioni saranno sospese come da calendario accademico),1200,7,
-29/04/2024,11:00-13:00,cancelled (Oliver not available),1200,8,Oliver couldn't find someone to have Sirio
-01/05/2024,14:00-16:00,cancelled (public holiday),1200,8,
-03/05/2024,11:00-13:00,TBA,1200,8,
-06/05/2024,11:00-13:00,TBA,1200,9,
-08/05/2024,14:00-16:00,TBA,1200,9,
-10/05/2024,11:00-13:00,TBA,1200,9,
-13/05/2024,11:00-13:00,TBA,1200,10,
-15/05/2024,14:00-16:00,TBA,1200,10,
-17/05/2024,11:00-13:00,TBA,1200,10,
-20/05/2024,11:00-13:00,TBA,1200,11,
-22/05/2024,14:00-16:00,TBA,1200,11,
-24/05/2024,11:00-13:00,TBA,1200,11,
+date,time,topic,location,week,notes,num
+13/03/2024,14:00-16:00,Welcome to course; Circle rotations and first notions.,1200,1,,1
+15/03/2024,14:00-16:00,"Expanding circle maps, symbolic dynamics and further notions.",1200,1,,2
+19/03/2024,16:00-18:00,"Periodic orbits and dense orbits for expanding maps, etc.",1200,2,,3
+20/03/2024,16:00-18:00,"More on expanding maps, proof that Lebesgue is ergodic for affine expanding interval maps.",1200,2,,4
+22/03/2024,11:00-13:00,cancelled (Oliver failed to use his calendar),1200,2,,
+25/03/2024,11:00-13:00,Hyperbolic toral automorphisms.,1200,3,,5
+27/03/2024,14:00-16:00,"Fixed points, invariant manifolds, etc for hyperbolic toral automorphisms.",1200,3,,6
+29/03/2024,11:00-13:00,cancelled (Easter),1200,3,,
+01/04/2024,11:00-13:00,cancelled (Easter),1200,4,,
+03/04/2024,14:00-16:00,"Subshifts of finite type, topology of the space of sequences.",1200,4,,7
+05/04/2024,11:00-13:00,Markov partition and symbolic coding for a hyperbolic toral automorphism.,1200,4,,8
+08/04/2024,11:00-13:00,cancelled (Oliver not available),1200,5,Oliver failed to schedule properly,
+10/04/2024,14:00-16:00,cancelled (Oliver not available),1200,5,Oliver ill still,
+12/04/2024,11:00-13:00,cancelled (Oliver not available),1200,5,,
+15/04/2024,11:00-13:00,cancelled (Oliver not available),1200,6,,
+17/04/2024,14:00-16:00,cancelled (Oliver not available),1200,6,Oliver travelling,
+19/04/2024,11:00-13:00,cancelled (Oliver not available),1200,6,Oliver travelling,
+22/04/2024,11:00-13:00,"Measure theory recap, examples, invariant measures, Poincaré recurrence.",1200,7,,9
+24/04/2024,14:00-16:00,"More on ergodic theory, mixing, weak-mixing.",1200,7,,10
+26/04/2024,11:00-13:00,cancelled (26 aprile 2024 le lezioni saranno sospese come da calendario accademico),1200,7,,
+29/04/2024,11:00-13:00,cancelled (Oliver not available),1200,8,Oliver couldn't find someone to have Sirio,
+01/05/2024,14:00-16:00,cancelled (public holiday),1200,8,,
+03/05/2024,11:00-13:00,Birkhoff's ergodic theorem,1200,8,,11
+06/05/2024,11:00-13:00,TBA,1200,9,,
+08/05/2024,14:00-16:00,TBA,1200,9,,
+10/05/2024,11:00-13:00,TBA,1200,9,,
+13/05/2024,11:00-13:00,TBA,1200,10,,
+15/05/2024,14:00-16:00,TBA,1200,10,,
+17/05/2024,11:00-13:00,TBA,1200,10,,
+20/05/2024,11:00-13:00,TBA,1200,11,,
+22/05/2024,14:00-16:00,TBA,1200,11,,
+24/05/2024,11:00-13:00,TBA,1200,11,,
+27/05/2024,11:00-13:00,TBA,1200,12,,
+29/05/2024,14:00-16:00,TBA,1200,12,,
+31/05/2024,11:00-13:00,TBA,1200,12,,
+03/06/2024,11:00-13:00,TBA,1200,13,,
+05/06/2024,14:00-16:00,TBA,1200,13,,
+07/06/2024,11:00-13:00,TBA,1200,13,,
